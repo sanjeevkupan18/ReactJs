@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import React from 'react';
+// import Counter from './components/Counter'
+// import { CounterContext } from './Context/Counter';
+// import { useContext } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+// const App = ()=>{
+//   const counterState = useContext(CounterContext);
 
+
+//   return (
+//     <div className="App">
+//       <h1>Count is {counterState.count}</h1>
+//       <Counter />
+//       <Counter />
+//       <Counter />
+//       <Counter />
+//     </div>
+//   )
+// }
+
+// export default App;
+
+import React from 'react';
+import Item from './components/Item'
+import Cart from './components/Cart'
+
+const App=()=>{
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="App">
+      <Item name="Macbook Pro" price={100000}/>
+      <Item name="Pendrive" price={800}/>
+      <Item name="Mobile" price={12000}/>
+      <Cart />
+    </div>
   )
 }
 
-export default App
+export default App;
