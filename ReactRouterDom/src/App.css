@@ -1,0 +1,13 @@
+.post-title{
+    text-decoration: none;
+    color:black;
+    padding:10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 10px;
+    cursor:pointer;
+    transition: 0.3s ease;
+}
+
+.post-title:hover{
+    transform: translateY(-3px);
+}
